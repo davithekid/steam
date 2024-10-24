@@ -63,7 +63,13 @@ header.nav2 ul li {
     font-family: "Josefin Sans";
 }
  
- 
+ h3{
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: "Josefin Sans";
+    margin-top: 10px;
+ }
  
 .lupa{
     background-color:  rgba(15, 38, 53, 0.986);  
@@ -88,7 +94,7 @@ aside{
     position: absolute;
     left: 2%;
     font-family: "Josefin Sans";
-    bottom: 16%;
+    bottom: 12%;
 }
  
 aside p{
@@ -106,8 +112,10 @@ main aside {
     color: white;
 }
  
-body {
-    background-color: rgba(15, 38, 53, 0.986);  
-}
+
  
+ 
+body {
+background-color: rgba(15, 38, 53, 0.986);  
+}
  

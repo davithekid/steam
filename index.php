@@ -1,16 +1,21 @@
+<?php
+require_once 'array.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="slide.css">
     <title>Steam</title>
- 
- 
+
+
 </head>
- 
+
 <body>
     <nav class="nav1">
         <img class="logo" src="steamcinza.png">
@@ -21,7 +26,7 @@
             <li><a href="#">Login</a></li>
         </ul>
     </nav>
- 
+
     <header class="nav2">
         <ul>
             <li><a href="#">Your Store</a></li>
@@ -32,9 +37,9 @@
             <button class="lupa" type="submit">🔎</button>
         </ul>
     </header>
- 
+
     <main>
-    <aside>
+        <aside>
             <h4>Vales-Presente</h4>
             <p>Já disponiveis no Steam</p>
             <h4>RECOMENDADO</h4>
@@ -64,38 +69,29 @@
             <p>Multijogador massivo</p>
             <p>RPG</p>
             <p>Simulação</p>
-           
+
         </aside>
         <section>
+            <h3>Destaques e recomendados</h3>
             <div class="container-slide">
                 <div class="dentro">
                     <?php
-                    $menuItens = [
-                        "siege" => [
-                            "foto" => '<img src="siege.jpg"></img>',
-                        ],
-                        "naruto" => [
-                            "foto" => '<img src="naruto.jpg"></img>',
-                        ],
-                        "assassinscreed" => [
-                            "foto" => '<img src="assassinscreed.jpg"></img>',
-                        ]
- 
-                    ];
                     foreach ($menuItens as $tipo => $item) {
                         echo "<div class='container-slide'>{$item['foto']}</div>";
+                        echo "<div class='container-slide'>
+                                <a href='./game.php?index={$tipo}' class='item-link'>{$item['nome']}</a>
+                              </div>";
                     }
                     ?>
                 </div>
                 <div class="action-button" id="previous" onclick="moveSlide(-1)">&laquo;</div>
-                <div class="action-button" id="next" onclick ="moveSlide(1)">&raquo;</div>
+                <div class="action-button" id="next" onclick="moveSlide(1)">&raquo;</div>
             </div>
         </section>
-       
     </main>
+
+
     <script src="slide.js"></script>
- 
 </body>
- 
+
 </html>
- 
